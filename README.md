@@ -24,7 +24,7 @@ Willkommen auf meinem Profil! Ich bin Alex, ein leidenschaftlicher Entwickler mi
 
 ## 🔗 Lass uns vernetzen
 - **Website:** [alexgaming.netlify.app](https://alexgaming.netlify.app)
-- **Discord:** [In Arbeit]
+- **Discord:** discord.com/invite/JzsK7Ay84f
 - **E-Mail:** Siehe Impressum
 ---
 
