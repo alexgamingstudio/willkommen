@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="5;url=https://github.com/alexgamingstudio" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weiterleitung – Alex Gaming</title>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header { background-color: rgba(0, 0, 0, 0.6); padding: 1.5rem 2rem; text-align: center; }
+    header img { max-height: 60px; }
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+    .redirect-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 4rem 2rem;
+      max-width: 650px;
+      width: 100%;
+    }
+    .redirect-box h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+    .redirect-box p { font-size: 1.2rem; color: #ccc; margin-bottom: 2rem; }
+    .redirect-box a { 
+      display: inline-block; padding: 0.8rem 1.8rem; background-color: #00bcd4; color: white; 
+      text-decoration: none; font-weight: 600; border-radius: 8px; transition: 0.3s;
+    }
+    .redirect-box a:hover { background-color: #0097a7; }
+    footer { text-align: center; padding: 1rem; font-size: 0.9rem; background-color: rgba(0, 0, 0, 0.4); color: #888; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png" alt="Logo" />
+  </header>
+
+  <main>
+    <div class="redirect-box">
+      <h1 id="r-title">Wird geladen...</h1>
+      <p id="r-desc">Bitte warten...</p>
+      <a href="https://github.com/alexgamingstudio" id="r-btn">GitHub</a>
+    </div>
+  </main>
+
+  <footer>
+  &copy; 2025 Alex Gaming – <span id="t-copy">Alle Rechte vorbehalten.</span> | 
+  <a href="legal.html" style="color:#888; text-decoration:none;">Impressum</a> | 
+  <a href="privacy.html" style="color:#888; text-decoration:none;">Datenschutz</a>
+</footer>
+
+  <script>
+    const rTexts = {
+      de: { title: "Weiterleitung läuft...", desc: "Du wirst in wenigen Sekunden zu meiner GitHub Seite weitergeleitet.", btn: "Jetzt manuell weiterleiten" },
+      at: { title: "Weiterleitung läuft...", desc: "Gleich geht's weiter zu meiner GitHub Seite.", btn: "Manuell weiterleiten" },
+      ch: { title: "Weiterleitung läuft...", desc: "Du wirst direkt zu GitHub weitergeleitet.", btn: "Manuell weiterleiten" },
+      en: { title: "Redirecting...", desc: "You will be redirected to my GitHub page in a few seconds.", btn: "Redirect manually now" },
+      fr: { title: "Redirection...", desc: "Vous serez redirigé vers ma page GitHub dans quelques secondes.", btn: "Rediriger manuellement" },
+      nl: { title: "Doorsturen...", desc: "Je wordt binnen enkele seconden doorgestuurd.", btn: "Handmatig doorsturen" },
+      it: { title: "Reindirizzamento...", desc: "Verrai reindirizzato alla mia pagina GitHub tra pochi secondi.", btn: "Reindirizza manualmente" },
+      pl: { title: "Przekierowanie...", desc: "Za kilka sekund zostaniesz przekierowany.", btn: "Przekieruj ręcznie" }
+    };
+
+    const lang = localStorage.getItem('selectedLang') || 'de';
+    document.getElementById('r-title').innerText = rTexts[lang].title;
+    document.getElementById('r-desc').innerText = rTexts[lang].desc;
+    document.getElementById('r-btn').innerText = rTexts[lang].btn;
+
+    setTimeout(() => { window.location.href = "https://github.com/alexgamingstudio"; }, 5000);
+  </script>
+</body>
+</html>
