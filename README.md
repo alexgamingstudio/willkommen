@@ -19,11 +19,6 @@ Willkommen auf meinem Profil! Ich bin Alex, ein leidenschaftlicher Entwickler mi
 | HTML5 / CSS3 | Netlify / GitHub Pages | JavaScript (ES6+) |
 | Responsive Design | Git / GitHub | Markdown |
 
----
-
-## 📈 GitHub Stats
-![Alex's GitHub stats](https://github-readme-stats.vercel.app/api?username=alexgamingstudio&show_icons=true&theme=tokyonight)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alexgamingstudio&layout=compact&theme=tokyonight)
 
 ---
 
