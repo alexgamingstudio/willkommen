@@ -3,32 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Willkommen – Alex Gaming</title>
-
-  <meta name="description" content="Willkommen bei Alex Gaming - Deutscher Developer mit Leidenschaft fürs Programmieren. Besuche meine GitHub-Projekte!">
-  <meta name="author" content="Alex Gaming">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Alex Gaming – Developer & Coding">
-  <meta property="og:description" content="Schön, dass du da bist! Ich bin ein deutscher Developer. Schau dir meine Projekte auf GitHub an!">
-  <meta property="og:image" content="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png">
-  <meta property="og:url" content="https://alex-gaming.github.io"> <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alex Gaming – Developer & Coding">
-  <meta name="twitter:description" content="Deutscher Developer mit Leidenschaft fürs Programmieren.">
-  <meta name="twitter:image" content="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png">
-
   <link rel="icon" type="image/png" href="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png">
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -40,97 +20,168 @@
 
     header {
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 1.5rem 2rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header img {
-      max-height: 60px;
-    }
+    header img { max-height: 50px; }
 
-    main {
-      flex: 1;
+    /* Länderauswahl Dropdown */
+    .lang-menu { position: relative; display: inline-block; }
+    
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      text-align: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: 0.3s;
     }
 
+    /* Das Menü ist standardmäßig versteckt */
+    .lang-dropdown {
+      display: none; 
+      position: absolute;
+      right: 0;
+      background: #1e3a45;
+      min-width: 180px;
+      box-shadow: 0px 8px 24px rgba(0,0,0,0.5);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    /* Diese Klasse wird per JS hinzugefügt/entfernt */
+    .lang-dropdown.show {
+      display: block;
+    }
+
+    .lang-dropdown a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .lang-dropdown a:hover { background: #2c5364; }
+
+    .flag { width: 22px; height: 16px; object-fit: cover; border-radius: 2px; border: 1px solid rgba(255,255,255,0.2); }
+
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
     .welcome-box {
       background-color: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 3rem 2rem;
-      max-width: 700px;
+      border-radius: 20px;
+      padding: 4rem 2rem;
+      max-width: 750px;
       width: 100%;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
-
-    .welcome-box h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 800;
+    .welcome-box h1 { font-size: 2.8rem; margin-bottom: 1.5rem; font-weight: 800; }
+    .welcome-box p { font-size: 1.25rem; line-height: 1.7; margin-bottom: 2.5rem; color: #d1d1d1; }
+    .welcome-box a { 
+      display: inline-block; padding: 1rem 2rem; background-color: #00bcd4; color: white; 
+      text-decoration: none; font-weight: 700; border-radius: 10px; transition: 0.3s;
     }
+    .welcome-box a:hover { background-color: #0097a7; transform: translateY(-2px); }
 
-    .welcome-box p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    .welcome-box a {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: #00bcd4;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .welcome-box a:hover {
-      background-color: #0097a7;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    @media (max-width: 600px) {
-      .welcome-box h1 {
-        font-size: 2rem;
-      }
-
-      .welcome-box p {
-        font-size: 1rem;
-      }
-    }
+    footer { text-align: center; padding: 1.5rem; font-size: 0.9rem; background-color: rgba(0, 0, 0, 0.4); color: #888; }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png" alt="Alex Gaming Logo" />
+    <img src="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png" alt="Logo" />
+    <div class="lang-menu">
+      <button class="lang-btn" id="menu-trigger">
+        <img src="https://flagcdn.com/w40/de.png" id="cur-flag" class="flag"> 
+        <span id="cur-lang-name">Deutsch</span>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <a href="javascript:void(0)" onclick="changeLang('de', 'Deutsch', 'de')"><img src="https://flagcdn.com/w40/de.png" class="flag"> Deutsch</a>
+        <a href="javascript:void(0)" onclick="changeLang('at', 'Österreich', 'at')"><img src="https://flagcdn.com/w40/at.png" class="flag"> Österreich</a>
+        <a href="javascript:void(0)" onclick="changeLang('ch', 'Schweiz', 'ch')"><img src="https://flagcdn.com/w40/ch.png" class="flag"> Schweiz</a>
+        <a href="javascript:void(0)" onclick="changeLang('en', 'English (US)', 'us')"><img src="https://flagcdn.com/w40/us.png" class="flag"> English</a>
+        <a href="javascript:void(0)" onclick="changeLang('fr', 'Français', 'fr')"><img src="https://flagcdn.com/w40/fr.png" class="flag"> Français</a>
+        <a href="javascript:void(0)" onclick="changeLang('nl', 'Nederlands', 'nl')"><img src="https://flagcdn.com/w40/nl.png" class="flag"> Nederlands</a>
+        <a href="javascript:void(0)" onclick="changeLang('it', 'Italiano', 'it')"><img src="https://flagcdn.com/w40/it.png" class="flag"> Italiano</a>
+        <a href="javascript:void(0)" onclick="changeLang('pl', 'Polski', 'pl')"><img src="https://flagcdn.com/w40/pl.png" class="flag"> Polski</a>
+      </div>
+    </div>
   </header>
 
   <main>
     <div class="welcome-box">
-      <h1>Willkommen bei Alex Gaming</h1>
-      <p>Schön, dass du da bist!<br>
-      Ich bin deutscher Developer und habe Spaß am Programmieren.<br>
-      Schau gerne bei meiner GitHub Startseite vorbei!</p>
-      <a href="startseite.html">Jetzt vorbeischauen</a>
+      <h1 id="t-title">Willkommen bei Alex Gaming</h1>
+      <p id="t-desc">Schön, dass du da bist!<br>Ich bin deutscher Developer und habe Spaß am Programmieren.<br>Schau gerne bei meiner GitHub Startseite vorbei!</p>
+      <a href="github.html" id="t-btn">Jetzt vorbeischauen</a>
     </div>
   </main>
 
-  <footer>
-    &copy; 2025 Alex Gaming – Alle Rechte vorbehalten.
-  </footer>
+ <footer>
+  &copy; 2025 Alex Gaming – <span id="t-copy">Alle Rechte vorbehalten.</span> | 
+  <a href="legal.html" style="color:#888; text-decoration:none;">Impressum</a> | 
+  <a href="privacy.html" style="color:#888; text-decoration:none;">Datenschutz</a>
+</footer>
 
+  <script>
+    const i18n = {
+      de: { title: "Willkommen bei Alex Gaming", desc: "Schön, dass du da bist!<br>Ich bin deutscher Developer und habe Spaß am Programmieren.", btn: "Jetzt vorbeischauen", copy: "Alle Rechte vorbehalten." },
+      at: { title: "Servus bei Alex Gaming", desc: "Schön, dass du da bist!<br>Ich bin deutscher Developer und habe Spaß am Programmieren.", btn: "Jetzt vorbeischauen", copy: "Alle Rechte vorbehalten." },
+      ch: { title: "Grüezi bei Alex Gaming", desc: "Schön, dass du da bist!<br>Ich bin deutscher Developer und habe Spaß am Programmieren.", btn: "Jetzt vorbeischauen", copy: "Alle Rechte vorbehalten." },
+      en: { title: "Welcome to Alex Gaming", desc: "Glad you're here!<br>I am a German developer with a passion for coding.", btn: "Visit now", copy: "All rights reserved." },
+      fr: { title: "Bienvenue chez Alex Gaming", desc: "Ravi de vous voir!<br>Je suis un développeur allemand passionné par le code.", btn: "Visiter", copy: "Tous droits réservés." },
+      nl: { title: "Welkom bij Alex Gaming", desc: "Leuk dat je er bent!<br>Ich bin ein deutscher Developer.", btn: "Nu bekijken", copy: "Alle rechten voorbehouden." },
+      it: { title: "Benvenuti in Alex Gaming", desc: "Piacere di averti qui!<br>Sono uno sviluppatore tedesco.", btn: "Visita ora", copy: "Tutti i diritti riservati." },
+      pl: { title: "Witamy w Alex Gaming", desc: "Fajnie, że jesteś!<br>Jestem niemieckim deweloperem.", btn: "Odwiedź teraz", copy: "Wszelkie prawa zastrzeżone." }
+    };
+
+    const trigger = document.getElementById('menu-trigger');
+    const dropdown = document.getElementById('lang-dropdown');
+
+    // Menü bei Klick umschalten
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation(); // Verhindert, dass der Klick sofort wieder durch den window-listener schließt
+      dropdown.classList.toggle('show');
+    });
+
+    // Menü schließen, wenn man außerhalb klickt
+    window.addEventListener('click', () => {
+      dropdown.classList.remove('show');
+    });
+
+    function changeLang(lang, name, flag) {
+      document.getElementById('t-title').innerText = i18n[lang].title;
+      document.getElementById('t-desc').innerHTML = i18n[lang].desc;
+      document.getElementById('t-btn').innerText = i18n[lang].btn;
+      document.getElementById('t-copy').innerText = i18n[lang].copy;
+      document.getElementById('cur-lang-name').innerText = name;
+      document.getElementById('cur-flag').src = `https://flagcdn.com/w40/${flag}.png`;
+      
+      localStorage.setItem('selectedLang', lang);
+      dropdown.classList.remove('show'); // Menü nach Auswahl schließen
+    }
+
+    window.onload = () => {
+      const saved = localStorage.getItem('selectedLang');
+      if(saved && i18n[saved]) {
+        const flagMap = {de:'de', at:'at', ch:'ch', en:'us', fr:'fr', nl:'nl', it:'it', pl:'pl'};
+        const nameMap = {de:'Deutsch', at:'Österreich', ch:'Schweiz', en:'English', fr:'Français', nl:'Nederlands', it:'Italiano', pl:'Polski'};
+        changeLang(saved, nameMap[saved], flagMap[saved]);
+      }
+    };
+  </script>
 </body>
 </html>
