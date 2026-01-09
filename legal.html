@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal & License – Alex Gaming</title>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/nLhPrLMH/1000072572-3643adb7b6957288cd73d569e60f8263-18-11-2023-12-35-17-20240415-181847-0000-Original.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; line-height: 1.6; padding: 40px 20px; }
+    .container { max-width: 850px; margin: 0 auto; background: rgba(255, 255, 255, 0.05); padding: 3rem 2rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); }
+    h1 { color: #00bcd4; font-size: 2.2rem; margin-bottom: 1.5rem; font-weight: 800; border-bottom: 2px solid rgba(0, 188, 212, 0.3); padding-bottom: 10px; }
+    h2 { margin-top: 2.5rem; font-size: 1.3rem; color: #fff; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    p { margin: 15px 0; color: #ccc; font-size: 1rem; }
+    .section-box { background: rgba(255, 255, 255, 0.03); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 1px solid rgba(255, 255, 255, 0.05); }
+    .contact-link { color: #00bcd4; text-decoration: none; font-weight: 700; transition: 0.3s; }
+    .contact-link:hover { color: #fff; }
+    .license-text { background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; color: #aaa; white-space: pre-wrap; border: 1px solid rgba(0, 188, 212, 0.2); margin-top: 15px; line-height: 1.4; }
+    .license-badge { display: inline-block; background: #00bcd4; color: #000; padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
+    .back-btn { display: inline-block; margin-top: 3rem; padding: 0.8rem 2rem; background: #00bcd4; color: white; text-decoration: none; border-radius: 10px; font-weight: 700; transition: 0.3s; }
+    .back-btn:hover { background: #0097a7; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="l-title">Legal & License</h1>
+    <section>
+      <h2 id="l-h1">📧 Kontakt</h2>
+      <div class="section-box">
+        <p id="l-t1">Für Anfragen oder Feedback erreichst du mich per E-Mail:</p>
+        <p><a href="mailto:team.alexgaming@icloud.com" class="contact-link">team.alexgaming@icloud.com</a></p>
+      </div>
+    </section>
+    <section>
+      <h2 id="l-h2">⚖️ Lizenzierung</h2>
+      <div class="section-box">
+        <span class="license-badge">MIT License</span>
+        <p id="l-t2">Sofern nicht anders angegeben, unterliegen meine Projekte der folgenden Lizenz:</p>
+        <div class="license-text">MIT License
+Copyright (c) 2026 Alex Gaming Studios
+... (Hier steht dein MIT Text) ...</div>
+      </div>
+    </section>
+    <section>
+      <h2 id="l-h3">📜 Rechtlicher Hinweis</h2>
+      <div class="section-box">
+        <p id="l-t3">Dies ist eine rein private Website zur Präsentation von Software-Projekten. Es erfolgt keine gewerbliche Nutzung.</p>
+        <p id="l-t4" style="font-size: 0.85rem; color: #777; font-style: italic;">Hinweis gemäß § 5 TMG: Aufgrund der privaten Natur wird auf die Veröffentlichung einer privaten Anschrift verzichtet. Identitätsanfragen können via E-Mail gestellt werden.</p>
+      </div>
+    </section>
+    <div style="text-align: center;"><a href="index.html" class="back-btn" id="l-btn">Zurück zur Startseite</a></div>
+  </div>
+
+  <script>
+    const i18n = {
+      de: { title: "Legal & Lizenz", h1: "📧 Kontakt", t1: "Für Anfragen oder Feedback erreichst du mich per E-Mail:", h2: "⚖️ Lizenzierung", t2: "Sofern nicht anders angegeben, unterliegen meine Projekte der folgenden Lizenz:", h3: "📜 Rechtlicher Hinweis", t3: "Dies ist eine rein private Website zur Präsentation von Software-Projekten. Es erfolgt keine gewerbliche Nutzung.", t4: "Hinweis gemäß § 5 TMG: Aufgrund der privaten Natur wird auf die Veröffentlichung einer privaten Anschrift verzichtet. Identitätsanfragen können via E-Mail gestellt werden.", btn: "Zurück zur Startseite" },
+      en: { title: "Legal & License", h1: "📧 Contact", t1: "For inquiries or feedback, you can reach me by email:", h2: "⚖️ Licensing", t2: "Unless otherwise stated, my projects are subject to the following license:", h3: "📜 Legal Notice", t3: "This is a purely private website for the presentation of software projects. There is no commercial use.", t4: "Note according to § 5 TMG: Due to the private nature, we refrain from publishing a private address. Identity inquiries can be made via email.", btn: "Back to Home" }
+      // Weitere Sprachen hier ergänzen
+    };
+    const lang = localStorage.getItem('selectedLang') || 'de';
+    const t = i18n[lang] || i18n['en'];
+    document.getElementById('l-title').innerText = t.title;
+    document.getElementById('l-h1').innerText = t.h1;
+    document.getElementById('l-t1').innerText = t.t1;
+    document.getElementById('l-h2').innerText = t.h2;
+    document.getElementById('l-t2').innerText = t.t2;
+    document.getElementById('l-h3').innerText = t.h3;
+    document.getElementById('l-t3').innerText = t.t3;
+    document.getElementById('l-t4').innerText = t.t4;
+    document.getElementById('l-btn').innerText = t.btn;
+  </script>
+</body>
+</html>
