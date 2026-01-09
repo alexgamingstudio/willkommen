@@ -1,4 +1,4 @@
-# 🎮 Alex Gaming Studios
+#  Alex Gaming Studios
 ### Developer | Tech Enthusiast | Open Source Contributor
 
 Willkommen auf meinem Profil! Ich bin Alex, ein leidenschaftlicher Entwickler mit Fokus auf Gaming-Technologien und Web-Development. Hier findest du meine Projekte, Experimente und Tools.
